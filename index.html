@@ -17,6 +17,20 @@
             padding: 10px 0;
             text-align: center;
         }
+        nav {
+            background-color: #444;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
         .container {
             max-width: 1200px;
             margin: 20px auto;
@@ -36,40 +50,90 @@
             flex: 1 1 calc(33.333% - 20px);
             box-sizing: border-box;
         }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Min Mediasida</h1>
     </header>
+    <nav>
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('discover')">Discover</a>
+        <a href="#" onclick="showSection('categories')">Categories</a>
+    </nav>
     <div class="container">
-        <h2>Bilder</h2>
-        <div class="gallery">
-            <div class="gallery-item">
-                <img src="bild1.jpg" alt="Beskrivning av bild 1">
-            </div>
-            <div class="gallery-item">
-                <img src="bild2.jpg" alt="Beskrivning av bild 2">
-            </div>
-            <!-- Lägg till fler bilder här -->
-        </div>
+        <!-- Home Section -->
+        <section id="home">
+            <h2>Välkommen till Min Mediasida!</h2>
+            <p>Här kan du utforska mina bilder och videos. Använd menyn ovan för att navigera.</p>
+        </section>
 
-        <h2>Videos</h2>
-        <div class="gallery">
-            <div class="gallery-item">
-                <video controls>
-                    <source src="video1.mp4" type="video/mp4">
-                    Din webbläsare stöder inte videon.
-                </video>
+        <!-- Discover Section -->
+        <section id="discover" class="hidden">
+            <h2>Discover</h2>
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="bild1.jpg" alt="Beskrivning av bild 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="bild2.jpg" alt="Beskrivning av bild 2">
+                </div>
+                <div class="gallery-item">
+                    <video controls>
+                        <source src="video1.mp4" type="video/mp4">
+                        Din webbläsare stöder inte videon.
+                    </video>
+                </div>
+                <!-- Lägg till fler bilder och videos här -->
             </div>
-            <div class="gallery-item">
-                <video controls>
-                    <source src="video2.mp4" type="video/mp4">
-                    Din webbläsare stöder inte videon.
-                </video>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="hidden">
+            <h2>Categories</h2>
+            <div>
+                <h3>Resor</h3>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="resor1.jpg" alt="Resebild 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="resor2.jpg" alt="Resebild 2">
+                    </div>
+                </div>
+                <h3>Familj</h3>
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <img src="familj1.jpg" alt="Familjebild 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="familj2.jpg" alt="Familjebild 2">
+                    </div>
+                </div>
+                <!-- Lägg till fler kategorier här -->
             </div>
-            <!-- Lägg till fler videos här -->
-        </div>
+        </section>
     </div>
+
+    <script>
+        // Funktion för att visa/dölja sektioner
+        function showSection(sectionId) {
+            // Dölj alla sektioner
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('hidden');
+            });
+
+            // Visa den valda sektionen
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+
+        // Visa Home som standard när sidan laddas
+        document.addEventListener('DOMContentLoaded', () => {
+            showSection('home');
+        });
+    </script>
 </body>
 </html>
