@@ -1,148 +1,268 @@
+
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UNIX FILES</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .gallery img, .gallery video {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .gallery-item {
-            flex: 1 1 calc(33.333% - 20px);
-            box-sizing: border-box;
-        }
-        .hidden {
-            display: none;
-        }
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RedTiger - Software, Tools, Cybersecurity</title>
+    <link rel="icon" href="img/icon_redtiger.ico" type="image/x-icon">
+    <meta property="og:title" content="RedTiger - Software, Tools, Cybersecurity">
+    <meta property="og:description" content="RedTiger is a multifunctional project that brings together various tools and software designed to meet diverse needs in development, cybersecurity, and automation, providing solutions tailored to different technical contexts." >
+    <meta property="og:image" content="https://redtiger.shop/img/logo_redtiger.png">
+    <meta property="og:url" content="https://redtiger.shop/home.php">
+    <meta name="theme-color" content="#a80505"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap">
+    <link rel="stylesheet" href="styles/styles-home.css">
 </head>
+
 <body>
-    <header>
-        <h1>UNIX</h1>
+    <header class="header">
+        <div class="logo-text-container">
+            <a href="home.php" class="a-logo-text-container">
+            <img class="img-logo" src="img/logo_redtiger.png" alt="RedTiger Logo">
+            <span class="header-text">RedTiger</span>
+            </a>
+        </div>
+        <div class="login-signup-buttons">
+            <a href="account/login.php" class="login-button">Login</a>
+            <a href="account/create-account.php" class="signup-button">Signup</a>
+        </div> 
     </header>
-    <nav>
-        <a href="#" onclick="showSection('home')">Home</a>
-        <a href="#" onclick="showSection('discover')">Discover</a>
-        <a href="#" onclick="showSection('categories')">Categories</a>
-    </nav>
-    <div class="container">
-        <!-- Home Section -->
-        <section id="home">
-            <h2> █    ██  ███▄    █  ██▓▒██   ██▒
- ██  ▓██▒ ██ ▀█   █ ▓██▒▒▒ █ █ ▒░
-▓██  ▒██░▓██  ▀█ ██▒▒██▒░░  █   ░
-▓▓█  ░██░▓██▒  ▐▌██▒░██░ ░ █ █ ▒ 
-▒▒█████▓ ▒██░   ▓██░░██░▒██▒ ▒██▒
-░▒▓▒ ▒ ▒ ░ ▒░   ▒ ▒ ░▓  ▒▒ ░ ░▓ ░
-░░▒░ ░ ░ ░ ░░   ░ ▒░ ▒ ░░░   ░▒ ░
- ░░░ ░ ░    ░   ░ ░  ▒ ░ ░    ░  
-   ░              ░  ░   ░    ░  
-                                 </h2>
-            <p>Här kan du utforska mina bilder och videos. Använd menyn ovan för att navigera.</p>
+
+    <header class="title">
+        <div class="div-title">
+            <img id="responsive-image" src="img/RedTiger-Banner-5000x1000.png" width="100%"> 
+        </div>
+    </header>
+   
+    <div class="div-description">
+        <p class="description">RedTiger is a multifunctional project that brings together various tools and software designed to meet diverse needs in development, cybersecurity, and automation, providing solutions tailored to different technical contexts.</p>
+        <div class="div-button-learn-more">
+            <a href="#learn-more" class="button-learn-more" id="learn-more-button">Learn More<span class="arrow">&#x25BC;</span></a>
+        </div>
+    </div>
+    
+
+    <div class="outer-box" id="learn-more">
+
+        <section class="inner-box">
+
+            <div class="div-disclaimer">
+                <h2 class="h2-title-disclaimer">
+                    Disclaimer:
+                </h2>
+                <ul class="disclaimer-list">
+                    <li>All RedTiger items have been developed for educational purposes only.</li>
+                    <li>This project was created with good intentions and is intended for personal use exclusively.</li>
+                    <li>By choosing to use RedTiger, you acknowledge and accept full responsibility for any consequences that may result from your actions.</li>
+                </ul>                
+            </div>
+
+
+            <div class="div-category">
+                <h2 class="title-category">
+                    Explore Our Products
+                </h2>
+                <p class="description-category">
+                    RedTiger offers a variety of software and tools tailored to your needs in development, cybersecurity, and automation. Our modern solutions are designed to meet current challenges, whether you're a professional, a developer, or a hobbyist. Explore our range of tools and see how we can help you achieve your goals.
+                </p>
+            </div>
+
+            <div class="shop-items-div">
+                                    <div class="shop-item">
+
+                    <img src="https://raw.githubusercontent.com/loxy0dev/RedTiger-tools/main/Img/RedTiger.png" class="img-product" alt="Multi-Tools">
+                        <h3>Multi-Tools</h3>
+                        <p>RedTiger-Tools is a free multi-tool with many features in the areas of Cybersecurity, Pentesting, OSINT, Network Scanning, Discord and Hacking.</p>
+                        
+                                                    <a href="https://github.com/loxy0dev/RedTiger-Tools" class="buy-button">Free</a>
+                                            </div>
+                                    <div class="shop-item">
+
+                    <img src="img/Anonymization-Software/Menu.png" class="img-product" alt="Anonymization Software">
+                        <h3>Anonymization Software</h3>
+                        <p>Our software guarantees optimal protection and anonymization for your Windows operating system. It optimizes, cleans your system, secures your browsing, and protects all confidential data.</p>
+                        
+                                                    <a href="product.php?id=2" class="buy-button">View Product</a>
+                                            </div>
+                                    <div class="shop-item">
+
+                    <img src="img/Premium/Tool.png" class="img-product" alt="Premium Multi-Tools">
+                        <h3>Premium Multi-Tools</h3>
+                        <p>The premium version is a version that has more in-depth functionality than the free multi-tools. (Python Obfuscator, Rat Discord, and other..)</p>
+                        
+                                                    <a href="product.php?id=3" class="buy-button">View Product</a>
+                                            </div>
+                            </div>
+            
+            <div class="div-category">
+                <h2 class="title-category">
+                    Discover The Reviews
+                </h2>
+                <p class="description-category">
+                    At RedTiger, user feedback is essential. It reflects the quality of our software and its positive impact on your daily work. Every review is an opportunity to learn and improve. We invite you to share your experience with our community, as your opinion can truly help others make the right choice!
+                </p>
+            </div>
+            
+            
+            
+            <div class="reviews-container">
+                                    <div class="review-item">
+                        <div class="profile-review">
+                            <div class="profile-container">
+                                <img src="img/profile_logo_red.png" class="profil-icon">
+                                <p class="review-pseudo">Consumer</p>
+                            </div>
+                            <span class="review-rating">
+                                <img src="img/stars/5-trustpilot.png" alt="Trustpilot Reviews" class="star-icon">
+                            </span>
+                        </div>
+                        
+                        <div class="title-description">
+                            <div class="review-comment-container">
+                                <p class="review-comment">
+                                    From the very start, the experience was amazing! I was using the free version, which is already very comprehensive, and I decided to switch to the paid version to get even more features. L0xy replied within a minute and was very responsive. The paid version is highly optimized and easy to use. I highly recommend it; even more complete, it’s truly top-notch!                                </p>
+                            </div>
+                            <a class="review-url" target="_blank" href="https://trustpilot.com/reviews/670fed96774a7c6d290e3edf">See the review <span class="arrow">&#x25B6;</span></a>
+                        </div>
+                    </div>
+                                    <div class="review-item">
+                        <div class="profile-review">
+                            <div class="profile-container">
+                                <img src="img/profile_logo_red.png" class="profil-icon">
+                                <p class="review-pseudo">
+Wayzi</p>
+                            </div>
+                            <span class="review-rating">
+                                <img src="img/stars/5-trustpilot.png" alt="Trustpilot Reviews" class="star-icon">
+                            </span>
+                        </div>
+                        
+                        <div class="title-description">
+                            <div class="review-comment-container">
+                                <p class="review-comment">
+                                    Amazing, the tools have no viruses and after buying from them, I was satisfied !!                                </p>
+                            </div>
+                            <a class="review-url" target="_blank" href="https://trustpilot.com/reviews/66fa525d7f0d033795ac5bf4">See the review <span class="arrow">&#x25B6;</span></a>
+                        </div>
+                    </div>
+                                    <div class="review-item">
+                        <div class="profile-review">
+                            <div class="profile-container">
+                                <img src="img/profile_logo_red.png" class="profil-icon">
+                                <p class="review-pseudo">Krakix</p>
+                            </div>
+                            <span class="review-rating">
+                                <img src="img/stars/5-trustpilot.png" alt="Trustpilot Reviews" class="star-icon">
+                            </span>
+                        </div>
+                        
+                        <div class="title-description">
+                            <div class="review-comment-container">
+                                <p class="review-comment">
+                                    No Scam, I paid, a few seconds later I received the product, great!                                </p>
+                            </div>
+                            <a class="review-url" target="_blank" href="https://trustpilot.com/reviews/66fa7a01b6def251615c91ca">See the review <span class="arrow">&#x25B6;</span></a>
+                        </div>
+                    </div>
+                                    <div class="review-item">
+                        <div class="profile-review">
+                            <div class="profile-container">
+                                <img src="img/profile_logo_red.png" class="profil-icon">
+                                <p class="review-pseudo">Younes</p>
+                            </div>
+                            <span class="review-rating">
+                                <img src="img/stars/5-trustpilot.png" alt="Trustpilot Reviews" class="star-icon">
+                            </span>
+                        </div>
+                        
+                        <div class="title-description">
+                            <div class="review-comment-container">
+                                <p class="review-comment">
+                                    Very comprehensive, I didn&#039;t encounter any bugs, honestly nothing to say, top-notch 👌                                </p>
+                            </div>
+                            <a class="review-url" target="_blank" href="https://trustpilot.com/reviews/66fc74bb60ef0045f63ae4ea">See the review <span class="arrow">&#x25B6;</span></a>
+                        </div>
+                    </div>
+                            </div>
+
+            <div class="div-button-reviews">
+                <a href="https://trustpilot.com/review/redtiger.shop" class="button-reviews" target="_blank">
+                    <img src="img/logo_trustpilot.png" alt="Trustpilot Reviews" class="logo-truspilot">
+                    All Reviews<span class="arrow">&#x25B6;</span>
+                </a>
+            </div>
+                     
+            
         </section>
 
-        <!-- Discover Section -->
-        <section id="discover" class="hidden">
-            <h2>Discover</h2>
-            <div class="gallery">
-                <div class="gallery-item">
-                    <img src="bild1.jpg" alt="Beskrivning av bild 1">
+        <footer>
+            <div class="footer-content">
+                <div class="footer-nav">
+                    <h3>Navigation</h3>
+                    <ul>
+                        <li><a href="home.php">Home</a></li>
+                        <li><a href="account/login.php">Login</a></li>
+                        <li><a href="account/create-account.php">Create Account</a></li>
+                        <li><a href="account/profile.php">Profile</a></li>
+                    </ul>
                 </div>
-                <div class="gallery-item">
-                    <img src="bild2.jpg" alt="Beskrivning av bild 2">
+        
+                <div class="footer-contact">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="github.html" target="_blank">Github</a></li>
+                        <li><a href="telegram.html" target="_blank">Telegram</a></li>
+                    </ul>
                 </div>
-                <div class="gallery-item">
-                    <video controls>
-                        <source src="video1.mp4" type="video/mp4">
-                        Din webbläsare stöder inte videon.
-                    </video>
-                </div>
-                <!-- Lägg till fler bilder och videos här -->
             </div>
-        </section>
+            
+            <div class="payment-logo">
+                <img src="img/Payment/logo_bitcoin.png" class="logo bitcoin">
+                <img src="img/Payment/logo_litecoin.png" class="logo litecoin">
+                <img src="img/Payment/logo_solana.png" class="logo solana">
+                <img src="img/Payment/logo_ethereum.png" class="logo ethereum">
+            </div>
 
-        <!-- Categories Section -->
-        <section id="categories" class="hidden">
-            <h2>Categories</h2>
-            <div>
-                <h3>Resor</h3>
-                <div class="gallery">
-                    <div class="gallery-item">
-                        <img src="resor1.jpg" alt="Resebild 1">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="resor2.jpg" alt="Resebild 2">
-                    </div>
-                </div>
-                <h3>Familj</h3>
-                <div class="gallery">
-                    <div class="gallery-item">
-                        <img src="familj1.jpg" alt="Familjebild 1">
-                    </div>
-                    <div class="gallery-item">
-                        <img src="familj2.jpg" alt="Familjebild 2">
-                    </div>
-                </div>
-                <!-- Lägg till fler kategorier här -->
-            </div>
-        </section>
+            <p class="texte">&copy; 2024 RedTiger, By <a href="loxy0dev.html" class="colored-link" target="_blank">loxy0dev</a> All rights reserved.</p>
+        
+        </footer> 
     </div>
 
+
     <script>
-        // Funktion för att visa/dölja sektioner
-        function showSection(sectionId) {
-            // Dölj alla sektioner
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.add('hidden');
-            });
-
-            // Visa den valda sektionen
-            document.getElementById(sectionId).classList.remove('hidden');
+        function smoothScroll(target) {
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY;
+            const startPosition = window.scrollY;
+            const distance = targetPosition - startPosition;
+            const duration = 1000;
+            let start = null;
+    
+            function animationScroll(currentTime) {
+                if (start === null) start = currentTime;
+                const timeElapsed = currentTime - start;
+                const run = ease(timeElapsed, startPosition, distance, duration);
+                window.scrollTo(0, run);
+                if (timeElapsed < duration) requestAnimationFrame(animationScroll);
+            }
+    
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+    
+            requestAnimationFrame(animationScroll);
         }
-
-        // Visa Home som standard när sidan laddas
-        document.addEventListener('DOMContentLoaded', () => {
-            showSection('home');
+    
+        document.getElementById('learn-more-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetSection = document.querySelector('#learn-more');
+            smoothScroll(targetSection);
         });
-    </script>
+
+    </script> 
 </body>
 </html>
