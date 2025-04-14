@@ -127,8 +127,13 @@
       // Here you would typically send this to your backend for authentication
       console.log('Login attempt:', username, password);
       
-      // For demo purposes, redirect to attack page
-      window.location.href = 'attack.html';
+      // Check if username and password match the specified values
+      if (username === 'UNIX' && password === 'UNIX') {
+        // Redirect to attack page
+        window.location.href = 'attack.html';
+      } else {
+        alert('Invalid username or password');
+      }
     });
   </script>
 </body>
